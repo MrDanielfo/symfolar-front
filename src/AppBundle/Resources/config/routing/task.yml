@@ -1,0 +1,29 @@
+task_new:
+    path: /new
+    defaults: { _controller: AppBundle:Task:new }
+    methods: POST
+    
+task_edit:
+    path: /edit/{id}
+    defaults: { _controller: AppBundle:Task:new, id:null }
+    methods: POST
+    
+task_list:
+    path: /tasklist
+    defaults: { _controller: AppBundle:Task:taskList }
+    methods: POST
+    
+task_single:
+    path: /tasksingle/{id}
+    defaults: { _controller: AppBundle:Task:taskSingle, id:null }
+    methods: POST
+    
+task_search:
+    path: /search/{search}
+    defaults: { _controller: AppBundle:Task:search, search:null }
+    methods: POST
+
+task_delete:
+    path: /taskdelete/{id}
+    defaults: { _controller: AppBundle:Task:taskRemove, id:null }
+    methods: POST
